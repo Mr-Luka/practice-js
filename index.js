@@ -75,6 +75,15 @@ class Jobs {
         this.age = age;
     }
     workHard() {
-        return `My is ${this.name}, I am ${this.age}, I ${this.happiness} my ${this.jobTittle} job`;
-    }
-}
+        return `My name is ${this.name}, I am ${this.age}, I ${this.happiness} my ${this.jobTittle} job`;
+    };
+    changeJob(newJob) {
+        this.jobTittle = newJob;
+    };
+};
+
+const john = new Jobs("John", "lawyer", "unhappy", 37);
+const mariola = new Jobs("Mariola", "facialist", "happy", 43);
+
+console.log(john.workHard());
+console.log(mariola.workHard());
