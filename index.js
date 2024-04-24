@@ -68,10 +68,10 @@ console.log(queen.antsLife());
 
 
 class Jobs {
-    constructor(name, jobTittle, happines, age){
+    constructor(name, jobTittle, happiness, age){
         this.name = name;
         this.jobTittle = jobTittle;
-        this.happines = happines;
+        this.happiness = happiness;
         this.age = age;
     }
     workHard() {
@@ -82,8 +82,8 @@ class Jobs {
     };
 };
 
-const john = new Jobs("John", "lawyer", "unhappy", 37);
-const mariola = new Jobs("Mariola", "facialist", "happy", 43);
+const john = new Jobs("John", "lawyer", "hate", 37);
+const mariola = new Jobs("Mariola", "facialist", "love", 43);
 
 console.log(john.workHard());
 console.log(mariola.workHard());
