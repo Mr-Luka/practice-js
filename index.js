@@ -1,8 +1,9 @@
 const person = {
     name: "Luka",
-    sayHiii() {
+    sayHi() {
         return `Hi my name is ${this.name}`;
     }
 }
-
-const sayHi = person.sayHiii.bind(person);
+const jenna = {name: "Jenna"}
+const sayHi = person.sayHi.bind(jenna);
+console.log(sayHi());
