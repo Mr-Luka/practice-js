@@ -65,3 +65,16 @@ console.log(worker.antsLife());
 queen.sizes("large");
 
 console.log(queen.antsLife());
+
+
+class Jobs {
+    constructor(name, jobTittle, happines, age){
+        this.name = name;
+        this.jobTittle = jobTittle;
+        this.happines = happines;
+        this.age = age;
+    }
+    workHard() {
+        return `My is ${this.name}, I am ${this.age}, I ${this.happiness} my ${this.jobTittle} job`;
+    }
+}
