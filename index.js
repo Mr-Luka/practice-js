@@ -22,24 +22,24 @@ console.log(employee1.employeeData());
 
 
 class School {
-    constructor (name, role, active) {
+    constructor (name, role) {
         this.name = name;
         this.role = role;
-        this.active = active;
     }
     schoolData(){
-        return `${this.name} is a ${this.role} and is ${this.active}`;
+        return `${this.role} ${this.name} and is ${this.status()}`;
     }
     status(status) {
-        if (this.status === "Active") {
-            return `${active}`;
-        } else if (this.status ==="Inactive") {
-            return `${inactive}`;
+        if (status === "yes") {
+            return `comes to school everyday`;
+        };
+        if (status === "no") {
+            return `doesn't come to school anymore`;
         }
     }
 }
 
 const professor = new School ("Lora", "Professor", "Active");
 const student = new School("Milan", "Student", "Inactive");
-
+professor.status("yes");
 console.log(professor.schoolData())
