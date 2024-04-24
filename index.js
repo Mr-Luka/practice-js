@@ -22,24 +22,46 @@ console.log(employee1.employeeData());
 
 
 class School {
-    constructor (name, role) {
+    constructor (name, role, status) {
         this.name = name;
         this.role = role;
+        this.status = status
     }
     schoolData(){
-        return `${this.role} ${this.name} and is ${this.status()}`;
+        return `${this.role} ${this.name} is ${this.status}`;
     }
-    status(status) {
-        if (status === "yes") {
-            return `comes to school everyday`;
-        };
-        if (status === "no") {
-            return `doesn't come to school anymore`;
-        }
+    theirStatus(here) {
+        this.status = here;
     }
+
 }
 
 const professor = new School ("Lora", "Professor", "Active");
 const student = new School("Milan", "Student", "Inactive");
-professor.status("yes");
+professor.theirStatus("Retired");
 console.log(professor.schoolData())
+console.log(student.schoolData());
+
+
+class AntKingdom {
+    constructor (role, age, size) {
+        this.role = role;
+        this.age = age;
+        this.size = size;
+    }
+    antsLife() {
+        return `${this.role} is ${this.age} years old and grew in ${this.size} size`;
+    }
+    sizes(mass) {
+        this.size = mass;
+    }
+}
+
+const queen = new AntKingdom ("Queen", "10", "medium");
+const worker = new AntKingdom ("Worker", "5", "small");
+
+console.log(queen.antsLife());
+console.log(worker.antsLife());
+queen.sizes("large");
+
+console.log(queen.antsLife());
