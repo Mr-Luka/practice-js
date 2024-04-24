@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="wrapper">
+        <p>Hey im inside the wrapper</p>
+    </div>
     <script>
         const person = {
     name: "Luka",
@@ -17,6 +20,15 @@
 const jenna = {name: "Jenna"};
 const sayHi = person.sayHiii.bind(jenna);
 
+
+    const $ = document.querySelector.bind(document);
+    const lookFor = document.querySelectorAll.bind(document);
+
+    const wrapper = document.querySelector(".wrapper");
+    const p = wrapper.querySelector("p");
+
+    console.log($("p"));
+    console.log(lookFor("p"))
     </script>
 </body>
 </html>
