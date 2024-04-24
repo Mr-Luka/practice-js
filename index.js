@@ -1,21 +1,20 @@
-class School {
-    constructor (name, role, active){
+class Employee {
+    constructor (name, department, salary) {
         this.name = name;
-        this.role = role;
-        this.active = active;  // true or false
-        return `${this.role} ${this.name} is ${this.active}`
+        this.department = department;
+        this.salary = salary;
     }
-    
-    access(active, inactive) {
-        if (this.active) {
-            return `is ${active}`;
-        } if (this.inactive) {
-            return `is ${inactive}`;
-        }
+    employeeData () {
+        return `I am ${this.name}, I work at ${this.department} and my salary is $${this.salary}.`
     }
+    updateInfo (salary) {
+        this.salary = salary;
+    }
+
 }
 
-const professor = new School("Lora", "professor", "active");
-const student = new School("Michael",  "student", "inactive");
 
-console.log(professor.School());
+const employee1 = new Employee ("Bojana", "construction", 1000);
+const employee2 = new Employee ("Milan", "Architect", 5000);
+employee1.updateInfo(10000)
+console.log(employee1.employeeData());
