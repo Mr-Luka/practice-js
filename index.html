@@ -69,6 +69,10 @@
     const slavica = {name: "Slavica", phone: "samsung"}
     const me = showMessage.message.bind(slavica);
     console.log(me())
+    const you = showMessage.message.call(showMessage);
+    console.log(you)
+    const we = showMessage.message.apply(showMessage, ["iPhone"])
+    console.log(we)
     </script>
 </body>
 </html>
