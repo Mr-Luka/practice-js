@@ -4,75 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./base.css">
+    <script src="./index.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="wrapper">
-        <p>Hey im inside the wrapper</p>
+   <div class="go"></div>
     </div>
-    <script>
-        const person = {
-    name: "Luka",
-    sayHiii() {
-        return `Hi my name is ${this.name}`;
-    }
-}
-const jenna = {name: "Jenna"};
-const sayHi = person.sayHiii.bind(jenna);
 
-
-    const $ = document.querySelector.bind(document);
-    const lookFor = document.querySelectorAll.bind(document);
-
-    const wrapper = document.querySelector(".wrapper");
-    const p = wrapper.querySelector("p");
-
-    console.log($("p"));
-    console.log(lookFor("p"))
-
-
-    const bill = {
-        total: 1000,
-        calculate(taxRate) {
-            return this.total + (this.total * taxRate);
-        },
-        describe(mealType, drinkType, taxRate) {
-            return `Your meal of ${mealType} with a drink of ${drinkType} was ${this.calculate(taxRate)}`;
-        }
-    }
-    const total = bill.calculate(0.13);
-    const calc = bill.calculate.bind({total: 500}, 0.13);
-    console.log(calc())
-
-    const total2 = bill.calculate.call({total: 500}, 0.06);
-    console.log(total2)
-    
-    const total3 = bill.calculate.apply({total: 325}, [0.60]);
-    console.log(total3)
-
-    const myMeal = bill.describe.call(bill, "pizza", "water", 0.13);
-    console.log(myMeal);
-
-    const myMeal2 = bill.describe.apply(bill, ["pizza", "beer", 0.23]);
-    console.log(myMeal2)
-
-    const showMessage = {
-        name: "Luka",
-        phone: "iPhone",
-        message() {
-            return `${this.name} has ${this.phone}`
-        },
-        phones(type) {
-            return `${type} is ${this.phone}`
-        }
-    }
-    const slavica = {name: "Slavica", phone: "samsung"}
-    const me = showMessage.message.bind(slavica);
-    console.log(me())
-    const you = showMessage.message.call(showMessage);
-    console.log(you)
-    const we = showMessage.message.apply(showMessage, ["iPhone"])
-    console.log(we)
-    </script>
 </body>
 </html>
